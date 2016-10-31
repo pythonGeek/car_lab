@@ -14,12 +14,12 @@ class Car(object):
         else:
             self
     def is_saloon(self):
-        if self.car_type=='trailer':
-            return False
-        return True
+        if self.car_type is not'trailer':
+            return True
+        return False
 
     def drive(self, speed):
-        if self.car_type == 'trailer':
+        if self.car_type is 'trailer':
             self.speed = speed * 11
         else:
             self.speed = 10 ** speed
