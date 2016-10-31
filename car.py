@@ -14,17 +14,20 @@ class Car(object):
         else:
             self
     def is_saloon(self):
+        '''Checks if the type of car is saloon or trailer'''
         if self.car_type is not'trailer':
             return True
         return False
 
     def drive(self, speed):
+        '''Check the type of car and returns its speed'''
         if self.car_type is 'trailer':
             self.speed = speed * 11
         else:
             self.speed = 10 ** speed
         return self
 
+# Creating instances of class Car
 def Main():
     man = Car('MAN', 'Truck', 'trailer')
     parked_speed = man.speed
